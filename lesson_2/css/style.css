@@ -10,6 +10,8 @@
 
     box-shadow: none;
     transition: background-color 1s, color .1s, box-shadow .5s;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
 .student-information:hover {
@@ -23,22 +25,243 @@
     font-size: 20px;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #dcdade;
+    font-family: 'Comfortaa', cursive;
 }
 
-td {
+sup {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+
+a {
+    text-decoration: none;
+    color: #0645ad;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.container {
+    position: relative;
+    width: 95%;
+    margin: 100px auto;
+    background-color: white;
+    padding: 7% 5% 5%;
+
+    border-radius: 20px;
+}
+
+.task_label {
+    position: absolute;
+    top: 15px;
+    left: 40%;
+    right: 40%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.first_table td, .second_table td {
     border: 5px groove whitesmoke;
     padding: 5px;
+    column-span: all;
 }
 
-.first_table, .second_table {
-    margin: 20px auto;
+.first_table, .second_table{
+    margin: 0 auto 20px;
+
+    table-layout: fixed;
+    width: 500px;
 
     color: white;
     background-color: #b07e86;
 
     border: 5px groove whitesmoke;
     border-collapse: collapse;
+}
+.wiki h2 {
+    font-size: 24px;
+}
+
+.wiki h2, .wiki h1 {
+    position: relative;
+    font-family: 'Georgia', Serif;
+    font-weight: 400;
+    line-height: 1.3;
+    overflow: hidden;
+}
+
+.wiki h2::after, .wiki h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: #9b9a9c;
+
+    position: absolute;
+    top: 98%;
+    left: 0;
+    z-index: 1000;
+}
+
+.wiki p {
+    font-family: 'Arial', Serif;
+    font-size: 14px;
+    line-height: 22.4px;
+}
+
+.content_title {
+    font-size: 29px;
+}
+
+#description {
+    float: right;
+    clear: right;
+    max-width: 320px;
+    margin: 0 0 0 12px;
+}
+
+.description_title {
+    font-size: 15px;
+}
+
+.description_table {
+    width: 100%;
+    padding: 5px;
+
+    border: 1px solid #a2a9b1;
+    border-collapse: separate;
+    border-spacing: 3px;
+
+    font-family: 'Arial', Serif;
+    text-align: left;
+    font-size: 12.6px;
+}
+
+.description_table th, .description_table td{
+    height: 21px;
+}
+
+#coast_img {
+    max-width: 100%;
+}
+
+#flag_img{
+    max-width: 160px;
+}
+
+#emblem_img {
+    max-width: 90px;
+    margin: 0 auto;
+}
+
+#map_img {
+    max-width: 100%;
+}
+
+#russia_img {
+    max-width: 22px;
+}
+
+.table_picture {
+    text-align: center;
+}
+
+.table_coordinates {
+    text-align: center;
+    position: relative;
+}
+
+.table_coordinates::before {
+    display: inline-block;
+    content: url("https://ru.wikipedia.org/w/extensions/Kartographer/styles/images/mapPin-progressive.svg?9e83b");
+    position: absolute;
+
+    left: 60px;
+    top: 0px;
+    height: 17px;
+}
+
+.picture_name td {
+    text-align: center;
+}
+
+.navigation {
+    width: 305px;
+    height: 240px;
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    font-family: 'Arial', Serif;
+    font-size: 13px;
+    line-height: 1.3;
+    padding: 7px;
+}
+
+.navigation h3 {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0;
+}
+
+.navigation li {
+    margin-bottom: 5px;
+}
+
+.navigation li span {
+    color: black
+}
+
+.population_table {
+    border: 1px solid #a2a9b1;
+    font-family: 'Arial', Serif;
+    font-size: 14px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.population_table .caption_blue {
+    background-color: #eaf3ff;
+}
+
+.population_table td, .population_table th {
+    height: 29px;
+    width: 68px;
+    border: 1px solid #a2a9b1;
+    text-align: center;
+    padding: 0.2em 0.4em;
+}
+
+.tr_blue * {
+    background-color: #cfe3ff;
+    text-align: center;
+}
+
+.decreasing::before {
+    content: '↘';
+    color: red;
+    font-weight:bold;
+    font-size: larger;
+}
+
+.increasing::before {
+    content: '↗';
+    color: green;
+    font-weight:bold;
+    font-size: larger;
 }
